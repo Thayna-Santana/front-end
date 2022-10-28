@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, createNgModule, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +9,11 @@ export class HomeComponent implements OnInit {
 
   public nomeProduto: string = 'Curso de Angular'; //criando variável
   anuncio: string = `O ${this.nomeProduto} está em promoção`;//concatenação literal string
-  idProduto: number = 123;
-  precoProduto: number = 2.59;
+  idProduto: number = 3;
+  precoProduto: number = 2.51;
   promocao: boolean = true;
+  foto: string = 'assets/img/crud.png';
+  dataValidade = '2021-12-31'
 
   constructor() {
     //this.anuncio = 'O' + this.nomeProduto + 'está em promoção' //concatenação normal
@@ -20,7 +22,8 @@ export class HomeComponent implements OnInit {
     console.log(`Id: `,this.idProduto);
     console.log(`Preço: `, this.precoProduto);
     console.log(`Promoção: `, this.promocao);
-    var variavel1;
+
+    /*var variavel1;
     let variavel2;
     const variavel3: number =10;
 
@@ -34,7 +37,7 @@ export class HomeComponent implements OnInit {
       var idade = 20;
       console.log('Sua idade é :' idade);
    }
-   */
+
 
     function imprimeIdadeFor(){
       for(var idade = 30; idade <=40; idade++){
@@ -43,7 +46,8 @@ export class HomeComponent implements OnInit {
       console.log('Idade fora do for: ', idade);
     }
    // imprimeIdade();
-    imprimeIdadeFor();
+    imprimeIdadeFor();*/
+
   }
 
   ngOnInit(): void {}
